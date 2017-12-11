@@ -41,12 +41,16 @@ app.use(cors({
 
 var port = process.env.PORT || 8080
 
-app.get("/", function(res, req) {
-  res.render("index")
-})
-
 app.use(express.static(__dirname + '/public'))
    .use(cookieParser());
+
+   app.get("/", function(res, req) {
+     res.render("index")
+   })
+
+   app.listen(port, function() {
+     console.log("app running")
+   })
 
 app.get('/login', function(req, res) {
   console.log(1);
