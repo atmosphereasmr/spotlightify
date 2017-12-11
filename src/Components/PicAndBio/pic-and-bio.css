@@ -1,0 +1,966 @@
+.artist-text-on {
+  color: white;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.artist-text-off {
+  color: transparent;
+  font-size: 25px;
+  transition: all 0.5s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+}
+
+.related-artist-text-off {
+  color: transparent;
+  font-size: 25px;
+  transition: all 0s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+}
+
+.artist-text-selected {
+  color: white;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.hide-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  opacity: 0;
+}
+
+.marilyn-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('http://dazedimg.dazedgroup.netdna-cdn.com/1600/azure/dazed-prod/1220/0/1220761.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s forwards;
+  transition: transform 1s;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marilyn-pic:hover {
+  background-image: url('../../Images/marilyn-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.marilyn-pic-fade {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('http://dazedimg.dazedgroup.netdna-cdn.com/1600/azure/dazed-prod/1220/0/1220761.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 1s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 1s;
+  animation: fade-out 1s forwards;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none
+}
+
+.marilyn-pic-hide {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('http://dazedimg.dazedgroup.netdna-cdn.com/1600/azure/dazed-prod/1220/0/1220761.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  animation: fade-in 1s forwards;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marilyn-pic-return {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('http://dazedimg.dazedgroup.netdna-cdn.com/1600/azure/dazed-prod/1220/0/1220761.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  animation: fade-in 1s forwards;
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0vw);
+  transition: transform 1s;
+}
+
+.marilyn-pic-return:hover {
+  background-image: url('../../Images/marilyn-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.marilyn-pic-selected {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../Images/marilyn-dark.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 0.5s forwards;
+  transform: translateX(40vw);
+  transition: transform 1s;
+  opacity: 0;
+}
+
+.drake-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../../Images/drake-light.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 0.5s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 0.5s;
+  opacity: 0;
+}
+
+.drake-pic:hover {
+  background-image: url('../../Images/drake-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.drake-pic-selected {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../Images/drake-dark.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 0.5s forwards;
+  transform: translateX(40vw);
+  transition: transform 1s;
+  opacity: 0;
+}
+
+.drake-pic-balled {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../Images/drake-dark.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 0.5s forwards;
+  transform: translateX(40vw);
+  opacity: 0;
+}
+
+.drake-pic-return {
+  width: 200px;
+  height: 200px;
+  color: transparent;
+  font-size: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../Images/drake-light.jpg');
+  background-size: contain;
+  transition: background-image 0.5s ease-in-out;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s forwards;
+  transform: translateX(20vw);
+  opacity: 0;
+  transform: translateX(20vw);
+  transition: transform 1s;
+}
+
+.drake-pic-return:hover {
+  background-image: url('../../Images/drake-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.drake-pic-fade {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../../Images/drake-light.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 1s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 1s;
+  animation: fade-out 1s forwards;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none
+}
+
+.lady-gaga-pic-fade {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('http://assets.nydailynews.com/polopoly_fs/1.2128935.1424888673!/img/httpImage/image.jpg_gen/derivatives/article_750/lady-gaga.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 1s forwards;
+  transform: translateY(20vw);
+  transition: transform 1s 1s;
+  animation: fade-out 1s forwards;
+  opacity: 0;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none
+
+}
+
+.lady-gaga-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('http://assets.nydailynews.com/polopoly_fs/1.2128935.1424888673!/img/httpImage/image.jpg_gen/derivatives/article_750/lady-gaga.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 1s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 1s;
+  opacity: 0;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lady-gaga-pic:hover {
+  background-image: url('../../Images/gaga-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.lady-gaga-pic-selected {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../../Images/gaga-dark.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 1s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 1s;
+  opacity: 0;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lady-gaga-pic-return {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('http://assets.nydailynews.com/polopoly_fs/1.2128935.1424888673!/img/httpImage/image.jpg_gen/derivatives/article_750/lady-gaga.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s forwards;
+  transform: translateX(20vw);
+  opacity: 0;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lady-gaga-pic-return:hover {
+  background-image: url('../../Images/gaga-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.eminem-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('https://78.media.tumblr.com/937605d12469b3eb1cca0a45990a1f32/tumblr_ooq2s1B7Ge1qg6i18o1_500.png');
+  background-size: contain;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 1.5s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 1.5s;
+  opacity: 0;
+  left: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eminem-pic-selected {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../../Images/em-dark.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s forwards;
+  transform: translateX(-0vw);
+  transition: transform 1s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    left: 40vw;
+}
+
+.eminem-pic:hover {
+  background-image: url('../../Images/em-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.eminem-pic-fade {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('https://78.media.tumblr.com/937605d12469b3eb1cca0a45990a1f32/tumblr_ooq2s1B7Ge1qg6i18o1_500.png');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 1.5s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 1.5s;
+  animation: fade-out 1s forwards;
+  opacity: 0;
+  left: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none
+}
+
+.eminem-pic-return {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('https://78.media.tumblr.com/937605d12469b3eb1cca0a45990a1f32/tumblr_ooq2s1B7Ge1qg6i18o1_500.png');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s;
+  opacity: 0;
+  left: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eminem-pic-return:hover {
+  background-image: url('../../Images/em-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.rihanna-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('https://www.fashiongonerogue.com/wp-content/uploads/2015/10/Rihanna-T-Style-Pictures-2015-02.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s 2s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 2s;
+  opacity: 0;
+  left: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rihanna-pic-selected {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../../Images/rihanna-dark.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  animation: fade-in 1s forwards;
+  transform: translateX(-20vw);
+  transition: transform 1s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 60vw;
+}
+
+.rihanna-pic:hover {
+  background-image: url('../../Images/rihanna-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.rihanna-pic-fade {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('https://www.fashiongonerogue.com/wp-content/uploads/2015/10/Rihanna-T-Style-Pictures-2015-02.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  right: 0vw;
+  left: 60vw;
+  animation: fade-out 1s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 2s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none
+}
+
+.rihanna-pic-hide {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('https://www.fashiongonerogue.com/wp-content/uploads/2015/10/Rihanna-T-Style-Pictures-2015-02.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: absolute;
+  right: 0vw;
+  left: 60vw;
+  animation: fade-in 1s 2s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s 2s;
+  opacity: 0;
+}
+
+.rihanna-pic-return {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('https://www.fashiongonerogue.com/wp-content/uploads/2015/10/Rihanna-T-Style-Pictures-2015-02.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  -moz-box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  box-shadow: 8px 8px 28px -12px rgba(43,43,43,1);
+  border: 1px #4c4c4c solid;
+  position: relative;
+  right: 0vw;
+  left: 60vw;
+  animation: fade-in 1s forwards;
+  transform: translateX(20vw);
+  transition: transform 1s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rihanna-pic-return:hover {
+  background-image: url('../../Images/rihanna-dark.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.go-back-on {
+  background-color: black;
+  border: 1px #4c4c4c solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  transition: all 1s ease-in-out;
+  color: #2B2B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  position: absolute;
+  top: 600px;
+  left: 20vw;
+  font-size: 18px;
+}
+
+.go-back-on:hover {
+  background-color: black;
+  border: 1px white solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  transition: all 1s ease-in-out;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  position: absolute;
+  top: 600px;
+  left: 20vw;
+  font-size: 20px;
+}
+
+.go-back-off {
+  background-color: transparent;
+  border: 1px transparent solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  color: transparent;
+  transition: all 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 350px;
+  left: 20vw;
+}
+
+.listen-circle-off {
+  background-color: transparent;
+  border: 1px transparent solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  color: transparent;
+  transition: all 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 350px;
+  left: 60vw
+}
+
+.listen-circle-on {
+  background-color: black;
+  border: 1px #1FD35F solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  color: #1FD35F;
+  transition: all 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 600px;
+  left: 60vw
+}
+
+.listen-circle-on:hover {
+  background-color: black;
+  border: 1px white solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  transition: all 1s ease-in-out;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  position: absolute;
+  top: 600px;
+  left: 60vw
+}
+
+.drake-add-ball-on {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #4c4c4c;
+  position: absolute;
+  top: 750px;
+  left: 28vw;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+.drake-add-ball-on:hover {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #1FD35F;
+  position: absolute;
+  top: 750px;
+  left: 28vw;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: 0.5s all ease-in-out;
+}
+
+.drake-add-ball-off {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  position: absolute;
+  top: 750px;
+  left: 28vw;
+  color: transparent;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.marilyn-add-ball-on {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #4c4c4c;
+  position: absolute;
+  top: 750px;
+  left: 8vw;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+.marilyn-add-ball-on:hover {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #1FD35F;
+  position: absolute;
+  top: 750px;
+  left: 8vw;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: 0.5s all ease-in-out;
+}
+
+.marilyn-add-ball-off {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  position: absolute;
+  top: 750px;
+  left: 8vw;
+  color: transparent;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.lady-gaga-add-ball-on {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #4c4c4c;
+  position: absolute;
+  top: 750px;
+  left: 48vw;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+.lady-gaga-add-ball-on:hover {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #1FD35F;
+  position: absolute;
+  top: 750px;
+  left: 48vw;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: 0.5s all ease-in-out;
+}
+
+.lady-gaga-add-ball-off {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  position: absolute;
+  top: 750px;
+  left: 48vw;
+  color: transparent;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.eminem-add-ball-on {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #4c4c4c;
+  position: absolute;
+  top: 750px;
+  left: 68vw;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+.eminem-add-ball-on:hover {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #1FD35F;
+  position: absolute;
+  top: 750px;
+  left: 68vw;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: 0.5s all ease-in-out;
+}
+
+.eminem-add-ball-off {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  position: absolute;
+  top: 750px;
+  left: 68vw;
+  color: transparent;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.rihanna-add-ball-on {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #4c4c4c;
+  position: absolute;
+  top: 750px;
+  left: 88vw;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+.rihanna-add-ball-on:hover {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #1FD35F;
+  position: absolute;
+  top: 750px;
+  left: 88vw;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  transition: 0.5s all ease-in-out;
+}
+
+.rihanna-add-ball-off {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  position: absolute;
+  top: 750px;
+  left: 88vw;
+  color: transparent;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes fade-out {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');

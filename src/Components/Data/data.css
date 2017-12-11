@@ -1,0 +1,536 @@
+.data-circle-1-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 850px;
+  left: 20vw;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.data-circle-2-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 850px;
+  left: 40vw;
+  color: black;
+  transition: all 0.5s ease-in-out;
+  flex-flow: column;
+  font-family: 'Nunito', sans-serif;
+}
+
+.data-circle-3-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 850px;
+  left: 60vw;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.data-circle-4-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1100px;
+  left: 20vw;
+  color: black;
+  background-size: cover;
+  animation: fade-out 0.5s forwards;
+  pointer-events: none;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+}
+
+.data-circle-4-on {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1100px;
+  left: 20vw;
+  color: black;
+  background-size: cover;
+  animation: fade-in 1s forwards;
+  border-style: solid;
+  border-width: 1px;
+  filter: grayscale(0%);
+  z-index: 2;
+  transition: all 1s ease-in-out;
+}
+
+.data-circle-4-on:hover {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(100%) brightness(30%);
+}
+
+.data-circle-5-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1100px;
+  left: 40vw;
+  color: black;
+  background-size: cover;
+  transition: all 1s ease-in-out;
+  animation: fade-out 0.5s forwards;
+  pointer-events: none
+}
+
+.data-circle-5-on {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1100px;
+  left: 40vw;
+  color: black;
+  background-size: cover;
+  animation: fade-in 1s forwards;
+  filter: grayscale(0%);
+  transition: all 1s ease-in-out;
+}
+
+.data-circle-5-on:hover {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(100%);
+  filter: grayscale(100%) brightness(30%);
+}
+
+.data-circle-6-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1100px;
+  left: 60vw;
+  color: black;
+  background-size: cover;
+  animation: fade-out 0.5s forwards;
+  pointer-events: none;
+  transition: all 1s ease-in-out;
+}
+
+.data-circle-6-on {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1100px;
+  left: 60vw;
+  color: black;
+  background-size: cover;
+  animation: fade-in 1s forwards;
+  filter: grayscale(0%);
+  transition: all 1s ease-in-out;
+}
+
+.data-circle-6-on:hover {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(100%);
+  filter: grayscale(100%) brightness(30%);
+}
+
+.data-circle-1-on {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #1FD35F;
+  position: absolute;
+  color: white;
+  top: 850px;
+  left: 20vw;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-circle-2-on {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #1FD35F;
+  position: absolute;
+  color: white;
+  top: 850px;
+  left: 40vw;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.data-circle-3-on {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #1FD35F;
+  position: absolute;
+  color: white;
+  top: 850px;
+  left: 60vw;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-text-container-1 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 1100px;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  color: transparent;
+  font-size: 18px;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+}
+
+.artist-text-container-1-hover {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 1100px;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+}
+
+.artist-text-container-2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 1100px;
+  left: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  transition: all 1s ease-in-out;
+  font-size: 18px;
+  color: transparent;
+}
+
+.artist-text-container-2-hover {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 1100px;
+  left: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+}
+
+.artist-text-container-3 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 1100px;
+  left: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  transition: all 1s ease-in-out;
+  font-size: 18px;
+  color: transparent;
+  z-index: 1;
+}
+
+.artist-text-container-3-hover {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 1100px;
+  left: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+}
+
+.snapshot-artist-1-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1100px;
+  left: 20vw;
+  color: black;
+  background-size: cover;
+  animation: fade-out 0.5s forwards;
+  pointer-events: none;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+}
+
+.snapshot-artist-name-off {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-size: cover;
+  transition: all 1s ease-in-out;
+  top: 1100px;
+  left: 20vw;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.results-artist-off {
+  background-color: transparent;
+  background-size: cover;
+  border: 1px transparent solid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  color: transparent;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 350px;
+  left: 40vw;
+  opacity: 100%;
+  transition: all 1s ease-in-out;
+  animation: fade-out 1s ease-in-out forwards;
+}
+
+.results-artist-on {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  top: 600px;
+  left: 40vw;
+  transition: all 1s ease-in-out;
+  animation: fade-in 1s ease-in-out forwards;
+  filter: grayscale(100%) brightness(25%);
+}
+
+.results-artist-name-on {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: white;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 600px;
+  left: 40vw;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.results-artist-name-off {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: transparent;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 350px;
+  left: 40vw;
+}
+
+.run-animation {
+  position: absolute;
+  animation: my-animation 1s ease-in-out forwards;
+}
+
+.run-animation-2 {
+  position: absolute;
+  animation: my-animation-2 1s ease-in-out forwards;
+}
+
+.run-animation-3 {
+  position: absolute;
+  animation: my-animation-3 1s ease-in-out forwards;
+}
+
+#logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: cover;
+  filter: grayscale(100%) brightness(25%);
+  transition: all 1s ease-in-out;
+  top: 1100px;
+  left: 20vw;
+}
+
+#snapshot-name {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: cover;
+  transition: all 1s ease-in-out;
+  top: 1100px;
+  left: 20vw;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes fade-out {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+@keyframes my-animation {
+  from {
+    opacity : 0;
+    left : 20vw;
+    top: 1100px;
+  }
+  to {
+    opacity : 1;
+    left : 40vw;
+    top: 600px;
+  }
+}
+
+@keyframes my-animation-2 {
+  from {
+    opacity : 0;
+    left : 40vw;
+    top: 1100px;
+  }
+  to {
+    opacity : 1;
+    left : 40vw;
+    top: 600px;
+  }
+}
+
+@keyframes my-animation-3 {
+  from {
+    opacity : 0;
+    left : 60vw;
+    top: 1100px;
+  }
+  to {
+    opacity : 1;
+    left : 40vw;
+    top: 600px;
+  }
+}
