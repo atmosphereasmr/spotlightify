@@ -39,6 +39,12 @@ app.use(cors({
   credentials: true
 }))
 
+var port = process.env.PORT || 8080
+
+app.get("/", function(res, req) {
+  res.render("index")
+})
+
 app.use(express.static(__dirname + '/public'))
    .use(cookieParser());
 
