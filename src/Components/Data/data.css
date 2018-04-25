@@ -88,6 +88,7 @@
 .data-circle-4-on:hover {
   transition: all 0.5s ease-in-out;
   filter: grayscale(100%) brightness(30%);
+  cursor: pointer;
 }
 
 .data-circle-5-off {
@@ -129,6 +130,7 @@
   transition: all 0.5s ease-in-out;
   filter: grayscale(100%);
   filter: grayscale(100%) brightness(30%);
+  cursor: pointer;
 }
 
 .data-circle-6-off {
@@ -170,6 +172,7 @@
   transition: all 0.5s ease-in-out;
   filter: grayscale(100%);
   filter: grayscale(100%) brightness(30%);
+  cursor: pointer;
 }
 
 .data-circle-1-on {

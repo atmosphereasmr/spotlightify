@@ -24,12 +24,17 @@ class PicAndBio extends Component {
       nameTwo: '',
       nameThree: '',
       access_token: '',
+      user_email: '',
+      user_id: 0,
+      username: '',
+      addArtist: '',
       relatedArtistId: '',
       relatedArtist2Id: '',
       relatedArtist3Id: '',
       link1: '',
       link2: '',
-      link3: ''
+      link3: '',
+      getSelectedId: ''
     };
     this.artistTextOff = this.artistTextOff.bind(this);
     this.scroller = this.scroller.bind(this)
@@ -50,11 +55,26 @@ class PicAndBio extends Component {
     this.scroller();
     axios.get('http://localhost:8888/grab-access', {withCredentials: true})
     .then( res => {
-      console.log(res)
+      console.log( res)
       this.setState({access_token: res.data.access_token}, () =>
     this.props.getAccessToken({access_token: this.state.access_token}))
-    })
-  }
+                   console.log('yeeee', this.state)
+    axios.get('https://api.spotify.com/v1/me', {headers: {Authorization: `Bearer ${this.state.access_token}`}})
+       .then (res => {
+         console.log(2)
+         this.setState({user_email: res.data.email, username: res.data.id})
+         axios.get('http://localhost:8888/api/spotlightify_users')
+         .then( res => {
+         axios.post('http://localhost:8888/api/spotlightify_users', {email: this.state.user_email, username: this.state.username})
+             for (var i = 0; i < res.data.length; i++) {
+               if (res.data[i].email === this.state.email) {
+                 this.setState({user_id: res.data[i].id}, () => this.state)
+
+               } else if (res.data[i].email !== this.state.email) {
+                 axios.post('http://localhost:8888/api/spotlightify_users', {email: this.state.user_email, username: this.state.username})
+                 break;
+               }}
+         })})})}
 
   scroller = () => {
     window.onscroll = () => {
@@ -130,10 +150,6 @@ class PicAndBio extends Component {
     const drakeName = document.getElementById("drake-name");
     const marilynName = document.getElementById("marilyn-name");
     const rihannaName = document.getElementById("rihanna-name")
-    const drakeBall = document.getElementById('drake-ball')
-    const marilynBall = document.getElementById('marilyn-ball')
-    const drakePic = document.getElementById('drake-pic')
-    const ladyGagaBall = document.getElementById('lady-gaga-ball')
 
     if (e === "Marilyn Manson") {
       marilynName.className = "artist-text-on"
@@ -141,7 +157,6 @@ class PicAndBio extends Component {
       ladyGagaName.className = "artist-text-off"
       eminemName.className = "artist-text-off"
       rihannaName.className = "artist-text-off"
-      marilynBall.className = "marilyn-add-ball-on"
     } else {
       marilynName.className = "artist-text-off"
     }
@@ -152,7 +167,6 @@ class PicAndBio extends Component {
       ladyGagaName.className = "artist-text-off"
       eminemName.className = "artist-text-off"
       rihannaName.className = "artist-text-off"
-      drakeBall.className = "drake-add-ball-on"
     }
 
     if (e === "Lady Gaga") {
@@ -161,7 +175,6 @@ class PicAndBio extends Component {
       drakeName.className = "artist-text-off"
       eminemName.className = "artist-text-off"
       rihannaName.className = "artist-text-off"
-      ladyGagaBall.className = "lady-gaga-add-ball-on"
     } else {
       ladyGagaName.className = "artist-text-off"
     }
@@ -185,36 +198,6 @@ class PicAndBio extends Component {
     } else {
       rihannaName.className = "artist-text-off"
     }
-    if (e === "Drake Ball") {
-      drakeName.className = "artist-text-on"
-      marilynName.className = "artist-text-off"
-      ladyGagaName.className = "artist-text-off"
-      eminemName.className = "artist-text-off"
-      rihannaName.className = "artist-text-off"
-      drakeBall.className = "drake-add-ball-on"
-    } else if (e === "Drake") {
-      drakeBall.className = "drake-add-ball-on"
-    }
-    if (e === "Marilyn Ball") {
-      drakeName.className = "artist-text-off"
-      marilynName.className = "artist-text-on"
-      ladyGagaName.className = "artist-text-off"
-      eminemName.className = "artist-text-off"
-      rihannaName.className = "artist-text-off"
-      marilynBall.className = "marilyn-add-ball-on"
-    } else if (e === "Marilyn") {
-      marilynBall.className = "marilyn-add-ball-on"
-    }
-    if (e === "Lady Gaga Ball") {
-      drakeName.className = "artist-text-off"
-      marilynName.className = "artist-text-off"
-      ladyGagaName.className = "artist-text-on"
-      eminemName.className = "artist-text-off"
-      rihannaName.className = "artist-text-off"
-      ladyGagaBall.className = "lady-gaga-add-ball-on"
-    } else if (e === "Lady Gaga Ball") {
-      ladyGagaBall.className = "lady-gaga-add-ball-on"
-    }
     }
 
   artistTextOff(e) {
@@ -224,47 +207,36 @@ class PicAndBio extends Component {
     const ladyGagaName = document.getElementById("lady-gaga-name");
     const eminemName = document.getElementById("eminem-id-name");
     const rihannaName = document.getElementById("rihanna-name")
-    const drakeBall = document.getElementById('drake-ball')
-    const marilynBall = document.getElementById('marilyn-ball')
-    const ladyGagaBall = document.getElementById('lady-gaga-ball')
 
     if (this.state.selected === "Drake") {
       drakeName.className = "artist-text-selected";
     } else {
       drakeName.className = "artist-text-off";
-      drakeBall.className = "drake-add-ball-off"
-    }
-    if (this.state.selected === "Marilyn") {
-      marilynName.className = "artist-text-selected";
-    } else {
-      marilynName.className = "artist-text-off";
-      marilynBall.className = "marilyn-add-ball-off"
-    }
-    if (this.state.selected === "Lady Gaga") {
-      ladyGagaName.className = "artist-text-selected"
-    } else {
-      ladyGagaName.className = "artist-text-off"
-      ladyGagaBall.className = "lady-gaga-add-ball-off"
-    }
-    if (this.state.selected === "Eminem") {
-      eminemName.className = "artist-text-selected"
-    } else {
-      eminemName.className = "artist-text-off"
-    }
-    if (this.state.selected === "Rihanna") {
-      rihannaName.className = "artist-text-selected"
-    } else {
-      rihannaName.className = "artist-text-off"
-    }
-    if (e === "Drake Ball") {
-      drakeBall.className = "drake-add-ball-off"
-    }
-    if (e === "Marilyn Ball") {
-      marilynBall.className = "marilyn-add-ball-off"
-    }
   }
+  if (this.state.selected === "Marilyn Manson") {
+    marilynName.className = "artist-text-selected";
+  } else {
+    marilynName.className = "artist-text-off";
+}
+  if (this.state.selected === "Lady Gaga") {
+    ladyGagaName.className = "artist-text-selected";
+  } else {
+    ladyGagaName.className = "artist-text-off";
+  }
+  if (this.state.selected === "Eminem") {
+    eminemName.className = "artist-text-selected";
+  } else {
+    eminemName.className = "artist-text-off";
+  }
+  if (this.state.selected === "Rihanna") {
+    rihannaName.className = "artist-text-selected";
+  } else {
+    rihannaName.className = "artist-text-off";
+  }
+}
 
   goBackClick = () => {
+           console.log(this.state)
 
     window.onscroll = () => {
       if (
@@ -297,6 +269,7 @@ class PicAndBio extends Component {
     const snapshotArtistName1 = document.getElementById('snapshot-name')
     const resultsArtist = document.getElementById('results-artist')
     const resultsArtistName = document.getElementById('results-artist-name')
+    const drakeBall = document.getElementById("drake-ball")
 
     rihannaName.className = "artist-text-off"
     rihannaPic.className = "rihanna-pic-return";
@@ -316,6 +289,7 @@ class PicAndBio extends Component {
     snapshotArtistName1.className = "snapshot-artist-1-off"
     resultsArtist.className = "results-artist-off"
     resultsArtistName.className = "results-artist-name-off"
+    drakeBall.className = "drake-add-ball-off"
 
 
   };
@@ -343,11 +317,13 @@ class PicAndBio extends Component {
     const goBack = document.getElementById("go-back");
     const drakePic = document.getElementById("drake-pic")
     const listenCircle = document.getElementById('listen-circle')
+    const drakeBall = document.getElementById("drake-ball")
 
     marilynPic.className = "marilyn-pic-selected";
     goBack.className = "go-back-on";
     marilynName.className = "artist-text-selected";
     listenCircle.className = "listen-circle-on"
+    drakeBall.className = "drake-add-ball-on"
 
     if (this.state.selected !== "Marilyn") {
       drakePic.className = "drake-pic-fade";
@@ -447,11 +423,13 @@ class PicAndBio extends Component {
     const drakePic = document.getElementById("drake-pic")
     const eminemName = document.getElementById("eminem-id-name")
     const listenCircle = document.getElementById('listen-circle')
+    const drakeBall = document.getElementById("drake-ball")
 
     rihannaPic.className = "rihanna-pic-selected";
     goBack.className = "go-back-on";
     rihannaName.className = "artist-text-selected";
     listenCircle.className = "listen-circle-on"
+    drakeBall.className = "drake-add-ball-on"
 
     if (this.state.selected === "Rihanna") {
       drakePic.className = "drake-pic-fade";
@@ -536,11 +514,13 @@ class PicAndBio extends Component {
     const drakePic = document.getElementById("drake-pic")
     const eminemName = document.getElementById("eminem-id-name")
     const listenCircle = document.getElementById('listen-circle')
+    const drakeBall = document.getElementById("drake-ball")
 
     eminemPic.className = "eminem-pic-selected";
     goBack.className = "go-back-on";
     eminemName.className = "artist-text-selected";
     listenCircle.className = "listen-circle-on"
+    drakeBall.className = "drake-add-ball-on"
 
     if (this.state.selected === "Eminem") {
       drakePic.className = "drake-pic-fade";
@@ -624,12 +604,14 @@ class PicAndBio extends Component {
     const goBack = document.getElementById("go-back");
     const drakePic = document.getElementById("drake-pic")
     const listenCircle = document.getElementById('listen-circle')
+    const drakeBall = document.getElementById("drake-ball")
 
 
     ladyGagaPic.className = "lady-gaga-pic-selected";
     goBack.className = "go-back-on";
     ladyGagaName.className = "artist-text-selected";
     listenCircle.className = "listen-circle-on"
+    drakeBall.className = "drake-add-ball-on"
 
     if (this.state.selected === "Lady Gaga") {
       drakePic.className = "drake-pic-fade";
@@ -709,11 +691,13 @@ class PicAndBio extends Component {
     const drakeName = document.getElementById("drake-name");
     const goBack = document.getElementById("go-back");
     const listenCircle = document.getElementById("listen-circle");
+    const drakeBall = document.getElementById("drake-ball")
 
     drakePic.className = "drake-pic-selected";
     goBack.className = "go-back-on";
     drakeName.className = "artist-text-selected";
     listenCircle.className = "listen-circle-on"
+    drakeBall.className = "drake-add-ball-on"
 
     if (this.state.selected === "Drake") {
       ladyGagaPic.className = "lady-gaga-pic-fade";
@@ -825,6 +809,10 @@ class PicAndBio extends Component {
   } else {
     window.location.href = `https://open.spotify.com/artist/${this.props.resultsArtistId}`
   }
+}
+
+addBall() {
+  axios.post('http://localhost:8888/api/add-artist', {artist: this.state.link, email: this.state.user_email})
 }
 
   render() {
@@ -948,16 +936,6 @@ class PicAndBio extends Component {
         >
         <h3>Listen on Spotify</h3>
         </div>
-        <div className="marilyn-add-ball-off" id="marilyn-ball"
-        onMouseEnter={() => {
-          this.artistTextOn("Marilyn Ball");
-        }}
-        onMouseLeave={() => {
-          this.artistTextOff("Marilyn Ball");
-        }}
-        >
-        +
-        </div>
         <div className="drake-add-ball-off" id="drake-ball"
         onMouseEnter={() => {
           this.artistTextOn("Drake Ball");
@@ -965,31 +943,13 @@ class PicAndBio extends Component {
         onMouseLeave={() => {
           this.artistTextOff("Drake Ball");
         }}
-        >
-        +
-        </div>
-        <div className="lady-gaga-add-ball-off" id="lady-gaga-ball"
-        onMouseEnter={() => {
-          this.artistTextOn("Lady Gaga Ball");
-        }}
-        onMouseLeave={() => {
-          this.artistTextOff("Lady Gaga Ball");
+        onClick={() => {
+          this.addBall()
         }}
         >
         +
         </div>
-        <div className="eminem-add-ball-on" id="eminem-ball"
-        onMouseEnter={() => {
-          this.artistTextOn("Eminem Ball");
-        }}
-        onMouseLeave={() => {
-          this.artistTextOff("Eminem Ball");
-        }}
-        >
-        +
-        </div>
-        <div className="rihanna-add-ball-on" id="rihanna-ball">
-        +
+        <div className="artist-bar">
         </div>
       </div>
     );

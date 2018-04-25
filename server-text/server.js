@@ -1,9 +1,15 @@
+require('dotenv').config();
+
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var session = require('express-session')
 var cors = require('cors')
+var massive = require('massive');
+var controller = require('./controller');
+var session = require('express-session');
+var bodyParser = require('body-parser');
 
 var client_id = '03a1fa81261d484d83f60c14183d0087'; // Your client id
 var client_secret = '4f2bdb7b4b9d42fcb904aa9d97f5cce5'; // Your secret
@@ -34,15 +40,24 @@ app.use(session({
   saveUninitialized: true
 }))
 
+app.use( bodyParser.json() );
 app.use(cors({
   origin: true,
   credentials: true
 }))
 
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 8888
 
 app.use(express.static(__dirname + '/public'))
    .use(cookieParser());
+
+   massive(process.env.CONNECTION_STRING).then( db => {
+     app.set('db', db)
+   })
+
+   massive(process.env.CONNECTION_STRING).then(dbInstance => {
+     app.set('db', dbInstance);
+   });
 
    app.get("/", function(res, req) {
      res.render("index")
@@ -53,7 +68,6 @@ app.use(express.static(__dirname + '/public'))
    })
 
 app.get('/login', function(req, res) {
-  console.log(1);
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
@@ -106,7 +120,8 @@ app.get('/callback', function(req, res) {
       if (!error && response.statusCode === 200) {
 
         var access_token = body.access_token,
-            refresh_token = body.refresh_token;
+            refresh_token = body.refresh_token,
+            email = body.email;
 
         var options = {
           url: 'https://api.spotify.com/v1/me',
@@ -119,13 +134,15 @@ app.get('/callback', function(req, res) {
           console.log('I the body', body);
         });
         if (!req.session.access_token) {
-          req.session.access_token = access_token
+          req.session.access_token = access_token,
+          req.session.email = body.email
         }
         // we can also pass the token to the browser to make requests from there
         res.redirect('http://localhost:3000/' +
           querystring.stringify({
             access_token: access_token,
-            refresh_token: refresh_token
+            refresh_token: refresh_token,
+            email: email
           }));
       } else {
         res.redirect('http://localhost:3000/' +
@@ -155,8 +172,10 @@ app.get('/refresh_token', function(req, res) {
   request.post(authOptions, function(error, response, body) {
     if (!error && response.statusCode === 200) {
       var access_token = body.access_token;
+      var email = body.email;
       res.send({
-        'access_token': access_token
+        'access_token': access_token,
+        'email': email
       });
     }
   });
@@ -166,6 +185,6 @@ app.get('/grab-access', function(req, res) {
   res.status(200).send(req.session)
 })
 
-
-console.log('Listening on 8888');
-app.listen(8888);
+app.get('/api/spotlightify_users', controller.getPlanes)
+app.post('/api/add-artist', controller.addArtist)
+app.post('/api/spotlightify_users', controller.addPlane)

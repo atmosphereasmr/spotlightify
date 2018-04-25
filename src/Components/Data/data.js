@@ -10,7 +10,8 @@ import {
   getBackgrounds,
   getRelatedArtistIds,
   getNames,
-  getLink
+  getLink,
+  getSelectedId
 } from "../../reducer";
 import axios from "axios";
 
@@ -25,7 +26,8 @@ class Data extends Component {
       previousRelatedArtistBackground: "",
       link1: "",
       link2: "",
-      link3: ""
+      link3: "",
+      selectedID: ''
     };
   }
 
@@ -755,5 +757,6 @@ export default connect(MapStateToProps, {
   getBackgrounds,
   getRelatedArtistIds,
   getNames,
-  getLink
+  getLink,
+  getSelectedId
 })(Data);

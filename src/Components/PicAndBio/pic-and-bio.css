@@ -62,6 +62,7 @@
 .marilyn-pic:hover {
   background-image: url('../../Images/marilyn-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .marilyn-pic-fade {
@@ -130,6 +131,7 @@
 .marilyn-pic-return:hover {
   background-image: url('../../Images/marilyn-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .marilyn-pic-selected {
@@ -175,6 +177,7 @@
 .drake-pic:hover {
   background-image: url('../../Images/drake-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .drake-pic-selected {
@@ -195,6 +198,7 @@
   transform: translateX(40vw);
   transition: transform 1s;
   opacity: 0;
+  pointer-events: none;
 }
 
 .drake-pic-balled {
@@ -243,6 +247,7 @@
 .drake-pic-return:hover {
   background-image: url('../../Images/drake-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .drake-pic-fade {
@@ -318,6 +323,7 @@
 .lady-gaga-pic:hover {
   background-image: url('../../Images/gaga-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .lady-gaga-pic-selected {
@@ -366,6 +372,7 @@
 .lady-gaga-pic-return:hover {
   background-image: url('../../Images/gaga-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .eminem-pic {
@@ -414,6 +421,7 @@
 .eminem-pic:hover {
   background-image: url('../../Images/em-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .eminem-pic-fade {
@@ -463,6 +471,7 @@
 .eminem-pic-return:hover {
   background-image: url('../../Images/em-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .rihanna-pic {
@@ -511,6 +520,7 @@
 .rihanna-pic:hover {
   background-image: url('../../Images/rihanna-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .rihanna-pic-fade {
@@ -580,6 +590,7 @@
 .rihanna-pic-return:hover {
   background-image: url('../../Images/rihanna-dark.jpg');
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .go-back-on {
@@ -618,6 +629,7 @@
   top: 600px;
   left: 20vw;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .go-back-off {
@@ -690,7 +702,8 @@
   font-family: 'Nunito', sans-serif;
   position: absolute;
   top: 600px;
-  left: 60vw
+  left: 60vw;
+  cursor: pointer;
 }
 
 .drake-add-ball-on {
@@ -700,7 +713,7 @@
   background-color: #4c4c4c;
   position: absolute;
   top: 750px;
-  left: 28vw;
+  left: 48vw;
   color: black;
   font-family: 'Nunito', sans-serif;
   display: flex;
@@ -708,6 +721,7 @@
   align-items: center;
   font-size: 35px;
   transition: all 0.5s ease-in-out;
+  z-index: 3;
 }
 
 .drake-add-ball-on:hover {
@@ -717,7 +731,7 @@
   background-color: #1FD35F;
   position: absolute;
   top: 750px;
-  left: 28vw;
+  left: 48vw;
   color: white;
   font-family: 'Nunito', sans-serif;
   display: flex;
@@ -725,6 +739,7 @@
   align-items: center;
   font-size: 35px;
   transition: 0.5s all ease-in-out;
+  cursor: pointer;
 }
 
 .drake-add-ball-off {
@@ -734,223 +749,24 @@
   background-color: transparent;
   position: absolute;
   top: 750px;
-  left: 28vw;
-  color: transparent;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  pointer-events: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.marilyn-add-ball-on {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #4c4c4c;
-  position: absolute;
-  top: 750px;
-  left: 8vw;
-  color: black;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: all 0.5s ease-in-out;
-}
-
-.marilyn-add-ball-on:hover {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #1FD35F;
-  position: absolute;
-  top: 750px;
-  left: 8vw;
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: 0.5s all ease-in-out;
-}
-
-.marilyn-add-ball-off {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: transparent;
-  position: absolute;
-  top: 750px;
-  left: 8vw;
-  color: transparent;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  pointer-events: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.lady-gaga-add-ball-on {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #4c4c4c;
-  position: absolute;
-  top: 750px;
-  left: 48vw;
-  color: black;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: all 0.5s ease-in-out;
-}
-
-.lady-gaga-add-ball-on:hover {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #1FD35F;
-  position: absolute;
-  top: 750px;
-  left: 48vw;
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: 0.5s all ease-in-out;
-}
-
-.lady-gaga-add-ball-off {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: transparent;
-  position: absolute;
-  top: 750px;
   left: 48vw;
   color: transparent;
   font-family: 'Nunito', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 35px;
   pointer-events: none;
   transition: all 0.5s ease-in-out;
 }
 
-.eminem-add-ball-on {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #4c4c4c;
-  position: absolute;
-  top: 750px;
-  left: 68vw;
-  color: black;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: all 0.5s ease-in-out;
-}
-
-.eminem-add-ball-on:hover {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #1FD35F;
-  position: absolute;
-  top: 750px;
-  left: 68vw;
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: 0.5s all ease-in-out;
-}
-
-.eminem-add-ball-off {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: transparent;
-  position: absolute;
-  top: 750px;
-  left: 68vw;
-  color: transparent;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  pointer-events: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.rihanna-add-ball-on {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #4c4c4c;
-  position: absolute;
-  top: 750px;
-  left: 88vw;
-  color: black;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: all 0.5s ease-in-out;
-}
-
-.rihanna-add-ball-on:hover {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: #1FD35F;
-  position: absolute;
-  top: 750px;
-  left: 88vw;
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  transition: 0.5s all ease-in-out;
-}
-
-.rihanna-add-ball-off {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: transparent;
-  position: absolute;
-  top: 750px;
-  left: 88vw;
-  color: transparent;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  pointer-events: none;
-  transition: all 0.5s ease-in-out;
+.artist-bar {
+  width: 50px;
+  height: 800px;
+  background-color: blue;
+  position: fixed;
+  left: 95vw;
+  top: 0vh;
 }
 
 @keyframes fade-in {

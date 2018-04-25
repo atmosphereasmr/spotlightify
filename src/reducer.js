@@ -29,7 +29,8 @@ const initialState = {
   input: '',
   resultsBackground: '',
   resultsArtistId: '',
-  resultsName: ''
+  resultsName: '',
+  selectedID: ''
 
 };
 
@@ -48,6 +49,7 @@ const GET_ACCESS_TOKEN = "GET_ACCESS_TOKEN"
 const GET_LINK = "GET_LINK"
 const SEARCH_ARTIST = "SEARCH_ARTIST"
 const GET_RESULTS_NAME = "GET_RESULTS_NAME"
+const GET_SELECTED_ID = "GET_SELECTED_ID"
 
 function reducer(state = initialState, action) {
   switch (action.type) {
@@ -97,6 +99,9 @@ function reducer(state = initialState, action) {
     case GET_RESULTS_NAME:
       let {name} = action;
       return {...state, resultsName: action.payload}
+    case GET_SELECTED_ID:
+      let {id} = action;
+      return {...state, selectedID: action.payload}
     default:
       return state;
   }
@@ -217,6 +222,13 @@ export function getLink(link1, link2, link3) {
   type: GET_LINK,
   payload: [link1, link2, link3]
 }
+}
+
+export function getSelectedId(id) {
+  return {
+    type: GET_SELECTED_ID,
+    payload: id
+  }
 }
 
 export function relatedArtist1Chosen(relatedArtist1Pick) {
