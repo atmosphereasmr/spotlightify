@@ -1,657 +1,1244 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-.background-row {
-  width: 100vw;
-  height: 100px;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: space-between;
-  flex-direction: row;
+a {
+  text-decoration: none;
 }
 
-body {
-  background-color: black;
-}
-
-.row-container {
-  width: 100vw;
-  height: 900px;
-  display: flex;
-  justify-content: space-between;
-  align-items: space-between;
-  flex-direction: column;
-  background-color: black;
-}
-
-.login-box {
-  width: 30vw;
-  height: 600px;
-  border-radius: 50%;
-  background-color: #1ED761;
-  opacity: 0.9;
-  box-shadow: 0px 0px 35px 0px rgba(255,255,255,1);
-  position: absolute;
-  z-index: 1;
-  margin-left: 35vw;
-  top: 150px;
-  border: solid white 1px;
+.background-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-.login-box > h1 {
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  font-style: italic;
-  font-size: 75px;
-}
-
-.login-box > h2 {
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  font-style: italic;
-  font-size: 25px;
-}
-
-.login-box > h3 {
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  font-style: italic;
-  font-size: 20px;
-}
-
-.here-hover:hover {
-  color: blue;
-  font-family: 'Nunito', sans-serif;
-  font-style: italic;
-  font-size: 20px;
-  transition: all 0.5s ease-in-out;
-}
-
-a {
-  color: inherit
-}
-
-.login-button-container {
-  width: 250px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: black;
-  border: 1px solid #1ED761;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-family: 'Nunito', sans-serif;
-  color: #1ED761;
-}
-
-a {
-    text-decoration: none;
-}
-
-.login-button-container:hover {
-  border: 1px solid white;
-  transition: all 0.5s;
-  color: white;
-}
-
-.container {
-  width: 100vw;
-  height: 750px;
-  background-color: black;
-}
-
-.background-circle {
-  width: 5%;
+.animation-container {
+  width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background-color: transparent;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+  filter: brightness(0.75);
+}
+
+.row-1 {
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ball-1 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  border: black solid 1px;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);
+  background-color: blue;
 }
 
 .ball-2 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s infinite;
+  background-color: blue;
 }
 
 .ball-3 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s infinite;
+  background-color: blue;
 }
 
 .ball-4 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s infinite;
+  background-color: blue;
 }
 
 .ball-5 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s infinite;
+  background-color: blue;
 }
 
 .ball-6 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s infinite;
+  background-color: blue;
+}
+
+.ball-7 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.ball-8 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.ball-9 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.ball-10 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.ball-1-1 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-1 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 1.25s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-1 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 1.25s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-1 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 1.25s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-1 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 1.25s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-1 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 1.25s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-1 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-1 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-1 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-1 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+.ball-1-2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-2 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 0.50s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-2 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 0.50s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-2 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 0.50s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-2 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 0.50s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
+  animation: blink-5 1s 0.25s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-2 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 0.50s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
+  animation: blink-4 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
+  animation: blink-3 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
+  animation: blink-2 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
+  animation: blink-1 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+
+.ball-1-3 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-3 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 1.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-3 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 1.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-3 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 1.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-3 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 1.5s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s 0.5s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-3 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 1.5s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s 0.5s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-3 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s 0.5s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-3 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s 0.5s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-3 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s 0.5s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-3 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+
+.ball-1-4 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-4 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 2s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-4 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 2s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-4 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 2s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-4 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 2s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-4 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 2s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-4 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-4 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-4 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-4 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+.ball-1-5 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-5 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-5 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-5 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-5 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s 0.75s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-5 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-5 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-5 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-5 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-5 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+.ball-1-6 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-6 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 0.75s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-6 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 0.75s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-6 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 0.75s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-6 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 0.75s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s 0.25s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-6 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 0.75s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-6 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-6 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-6 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-6 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+.ball-1-7 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-7 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 1.75s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-7 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 1.75s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-7 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 1.75s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-7 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 1.75s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-7 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 1.75s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-7 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-7 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-7 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-7 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+.ball-1-8 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-8 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 1s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-8 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 1s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-8 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 1s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-8 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 1s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s 0.25s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-8 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 1s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-8 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-8 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-8 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s 0.25s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-8 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+.ball-1-9 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-9 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 2.25s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-9 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 2.25s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-9 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 2.25s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-9 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 2.25s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s 0.75s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-9 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 2.25s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-7-9 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-8-9 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-9-9 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s 0.75s infinite;
+  transition: 0.2s;
+}
+
+.ball-10-9 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+}
+
+.ball-1-10 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-2-10 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-2 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-3-10 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-3 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-4-10 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-4 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid rgb(32, 32, 32);
 }
 
 .ball-5-10 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-5 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid red;
+  animation: blink-5 1s infinite;
+  transition: 0.2s;
 }
 
 .ball-6-10 {
-  width: 5%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  background-color: transparent;
-  animation: ball-6 2s 2.5s infinite;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-4 1s infinite;
+  transition: 0.2s;
 }
 
-@keyframes ball-6 {
-  0% {border: transparent 1px solid}
-  10% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  20% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  30% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  40% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  50% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  60% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  70% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  80% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  90% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  100% {border: transparent 1px solid}
+.ball-7-10 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid yellow;
+  animation: blink-3 1s infinite;
+  transition: 0.2s;
 }
 
-@keyframes ball-5 {
-  0% {border: transparent 1px solid}
-  10% {border: transparent 1px solid}
-  20% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  30% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  40% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  50% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  60% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  70% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  80% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(30,215,97,1);}
-  90% {border: transparent 1px solid}
-  100% {border: transparent 1px solid}
+.ball-8-10 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-2 1s infinite;
+  transition: 0.2s;
 }
 
-@keyframes ball-4 {
-  0% {border: transparent 1px solid}
-  10% {border: transparent 1px solid}
-  20% {border: transparent 1px solid}
-  30% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  40% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  50% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  60% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  70% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  80% {border: transparent 1px solid}
-  90% {border: transparent 1px solid}
-  100% {border: transparent 1px solid}
+.ball-9-10 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  animation: blink-1 1s infinite;
+  transition: 0.2s;
 }
 
-@keyframes ball-3 {
-  0% {border: transparent 1px solid}
-  10% {border: transparent 1px solid}
-  20% {border: transparent 1px solid}
-  30% {border: transparent 1px solid}
-  40% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  50% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  60% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(221,255,0,1);}
-  70% {border: transparent 1px solid}
-  80% {border: transparent 1px solid}
-  90% {border: transparent 1px solid}
-  100% {border: transparent 1px solid}
+.ball-10-10 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid #1ED760;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+  box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
 }
 
-@keyframes ball-2 {
-  0% {border: transparent 1px solid}
-  10% {border: transparent 1px solid}
-  20% {border: transparent 1px solid}
-  30% {border: transparent 1px solid}
-  40% {border: transparent 1px solid}
-  50% {border: black 1px solid;
-box-shadow: 0px 0px 43px 1px rgba(255,0,0,1);}
-  60% {border: transparent 1px solid}
-  70% {border: transparent 1px solid}
-  80% {border: transparent 1px solid}
-  90% {border: transparent 1px solid}
-  100% {border: transparent 1px solid}
+.log-in-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #1ED760;
+  z-index: 1;
+  animation: fade-in 1s 0.5s forwards;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border: 2px solid white;
+}
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+.spotlightify-title {
+  width: 50%;
+  height: 25%;
+  color: black;
+  font-size: 36px;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotlightify-subtitle {
+  width: 50%;
+  height: 10%;
+  color: black;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-in-button {
+  width: 60%;
+  height: 15%;
+  background-color: black;
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.log-in-button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.25s;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0}
+  100% {opacity: 0.95}
+}
+
+@keyframes blink-1 {
+  0% {border: 2px solid rgb(32, 32, 32);}
+  10% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  20% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  30% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  40% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  50% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  60% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  70% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  80% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  90% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  100% {border: 2px solid rgb(32, 32, 32);}
+}
+
+@keyframes blink-2 {
+  0% {border: 2px solid rgb(32, 32, 32);}
+  10% {border: 2px solid rgb(32, 32, 32);}
+  20% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  30% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  40% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  50% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  60% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  70% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  80% {border: 2px solid #1ED760;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);
+      box-shadow: 0px 0px 22px 1px rgba(30,215,96,1);}
+  90% {border: 2px solid rgb(32, 32, 32);}
+  100% {border: 2px solid rgb(32, 32, 32);}
+}
+
+@keyframes blink-3 {
+  0% {border: 2px solid rgb(32, 32, 32);}
+  10% {border: 2px solid rgb(32, 32, 32);}
+  20% {border: 2px solid rgb(32, 32, 32);;}
+  30% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  40% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  50% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  60% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  70% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  80% {border: 2px solid rgb(32, 32, 32);}
+  90% {border: 2px solid rgb(32, 32, 32);}
+  100% {border: 2px solid rgb(32, 32, 32);}
+}
+
+@keyframes blink-4 {
+  0% {border: 2px solid rgb(32, 32, 32);}
+  10% {border: 2px solid rgb(32, 32, 32);}
+  20% {border: 2px solid rgb(32, 32, 32);;}
+  30% {border: 2px solid rgb(32, 32, 32);}
+  40% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  50% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  60% {border: 2px solid yellow;
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,255,0,1);}
+  70% {border: 2px solid rgb(32, 32, 32);}
+  80% {border: 2px solid rgb(32, 32, 32);}
+  90% {border: 2px solid rgb(32, 32, 32);}
+  100% {border: 2px solid rgb(32, 32, 32);}
+}
+
+@keyframes blink-5 {
+  0% {border: 2px solid rgb(32, 32, 32);}
+  10% {border: 2px solid rgb(32, 32, 32);}
+  20% {border: 2px solid rgb(32, 32, 32);;}
+  30% {border: 2px solid rgb(32, 32, 32);}
+  40% {border: 2px solid rgb(32, 32, 32);}
+  50% {border: 2px solid rgb(167, 0, 0);
+      -webkit-box-shadow: 0px 0px 22px 1px rgba(255,0,0,1);
+      -moz-box-shadow: 0px 0px 22px 1px rgba(255,0,0,1);
+      box-shadow: 0px 0px 22px 1px rgba(255,0,0,1);}
+  60% {border: 2px solid rgb(32, 32, 32);}
+  70% {border: 2px solid rgb(32, 32, 32);}
+  80% {border: 2px solid rgb(32, 32, 32);}
+  90% {border: 2px solid rgb(32, 32, 32);}
+  100% {border: 2px solid rgb(32, 32, 32);}
 }
