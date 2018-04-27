@@ -10,6 +10,7 @@ var massive = require('massive');
 var controller = require('./controller');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var path = require("path");
 
 var client_id = '03a1fa81261d484d83f60c14183d0087'; // Your client id
 var client_secret = '4f2bdb7b4b9d42fcb904aa9d97f5cce5'; // Your secret
@@ -59,16 +60,14 @@ app.use(express.static(__dirname + '/public'))
      app.set('db', dbInstance);
    });
 
-   app.get("/", function(res, req) {
-     res.render("index")
-   })
+
 
    app.listen(port, function() {
      console.log("app running")
    })
 
-   app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../build/index.html'), function(err) {
+   app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '../build/index.html'), function(err) {
       if (err) {
         res.status(500).send(err)
       }
