@@ -138,14 +138,14 @@ app.get('/callback', function(req, res) {
           req.session.email = body.email
         }
         // we can also pass the token to the browser to make requests from there
-        res.redirect('http://www.spotlightify-final.herokuapp.com/' +
+        res.redirect('http://spotlightify-final.herokuapp.com/search' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token,
             email: email
           }));
       } else {
-        res.redirect('http://www.spotlightify-final.herokuapp.com/' +
+        res.redirect('http://spotlightify-final.herokuapp.com/search' +
           querystring.stringify({
             error: 'invalid_token'
           }));
