@@ -13,7 +13,7 @@ var bodyParser = require('body-parser');
 
 var client_id = '03a1fa81261d484d83f60c14183d0087'; // Your client id
 var client_secret = '4f2bdb7b4b9d42fcb904aa9d97f5cce5'; // Your secret
-var redirect_uri = 'http://spotlightify-final.herokuapp.com/search/'; // Your redirect uri
+var redirect_uri = 'http://spotlightify-final.herokuapp.com/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
